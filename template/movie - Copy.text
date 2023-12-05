@@ -1,0 +1,54 @@
+import requests
+
+# Replace 'YOUR_API_KEY' with your actual TMDb API key
+api_key = 'YOUR_API_KEY'
+
+# Base URL for TMDb API
+base_url = 'https://api.themoviedb.org/3/'
+
+# Endpoint for getting movie details (replace {movie_id} with the actual movie ID)
+movie_id = 123  # Example movie ID
+
+# Construct the full URL
+url = f'{base_url}movie/{movie_id}?api_key={api_key}'
+
+# Send the GET request
+response = requests.get(url)
+
+# Check if the request was successful
+if response.status_code == 200:
+    data = response.json()
+    # Parse and use the movie data from the 'data' variable
+else:
+    print(f"Error: {response.status_code} - {response.text}")
+
+
+
+
+
+import requests
+
+# Replace 'YOUR_API_KEY' with your TMDb API key
+api_key = 'YOUR_API_KEY'
+
+# Base URL for TMDb API
+base_url = 'https://api.themoviedb.org/3/'
+
+# Example movie name
+movie_name = 'The Shawshank Redemption'
+
+# Construct the URL for searching the movie by name
+url = f'{base_url}search/movie?api_key={api_key}&query={movie_name}'
+
+# Send the GET request
+response = requests.get(url)
+
+if response.status_code == 200:
+    data = response.json()
+    if data['results']:
+        # The first result is likely the closest match
+        movie_id = data['results'][0]['id']
+    else:
+        # Handle the case where no matching movie is found
+else:
+    # Handle the error

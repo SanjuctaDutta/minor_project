@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>FormWizard_v4</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta name="author" content="colorlib.com">
+
+		<!-- MATERIAL DESIGN ICONIC FONT -->
+		<link rel="stylesheet" href="static/assets1/fonts/material-design-iconic-font/css/material-design-iconic-font.css">
+
+		<!-- DATE-PICKER -->
+		<link rel="stylesheet" href="static/assets1/vendor/date-picker/css/datepicker.min.css">
+
+		<!-- STYLE CSS -->
+		<link rel="stylesheet" href="static/assets1/css/style.css">
+	</head>
+	<body>
+		<div class="wrapper">
+			
+            <form id="movie_data">
+            	<div class="form-header">
+            		
+            		<h3>PLEASE let us know with your preferences</h3>
+            	</div>
+            	<div id="wizard">
+            		<!-- SECTION 1 -->
+	                <h4></h4>
+	                <section>
+	                    <div class="form-row" style="margin-bottom: 26px;">
+	                    	<label for="">
+	                    	 What type of movie do you love to watch? 
+	                    	</label>
+	                    	<div class="form-holder">
+								<select name="genre" id="genre" class="form-control">
+									{% for genre in genres %}
+									<option value="{{genre}}" class="option">{{genre}}</option>
+									{% endfor %}
+										
+								</select>
+
+								
+
+
+
+								
+								<i class="zmdi zmdi-caret-down"></i>
+	                    	</div>
+	                    </div>	
+	                    <div class="form-row">
+	                    	<label for="">
+	                    		What are languages you prefer to watch?
+	                    	</label>
+	                    	<div class="form-holder">
+	                    		<select name="language" id="" class="form-control">
+									{% for language in languages %}
+									<option value="{{language}}" class="option">{{language}}</option>
+									{% endfor %}
+								</select>
+								<i class="zmdi zmdi-caret-down"></i>
+	                    	</div>
+	                    </div>	
+	                    <div class="form-row">
+	                    	<label for="">
+	                    	 choose country 
+	                    	</label>
+	                    	<div class="form-holder">
+	                    		<select name="country" id="" class="form-control">
+									{% for country in countries %}
+									<option value="{{country}}" class="option">{{country}}</option>
+									{% endfor %}
+								</select>
+								<i class="zmdi zmdi-caret-down"></i>
+	                    	</div>
+	                    </div>	
+	                    	
+	                    	
+	                </section>
+	                
+					<!-- SECTION 2 -->
+	                <h4></h4>
+	                <section>
+	                    <div class="form-row">
+	                    	<label for="">
+	                    		do you want to add some specific keywords?
+	                    	</label>
+	                    	<div class="form-holder">
+	                    		<select name="keyword" id="" class="form-control">
+									{% for keyword in keywords %}
+									<option value="{{keyword}}" class="option">{{keyword}}</option>
+									{% endfor %}
+								</select>
+	                    	</div>
+	                    </div>	
+	                    <div class="form-row">
+	                    	<label for="">
+	                    		Mention your favourite actors
+	                    	</label>
+	                    	<div class="form-holder">
+	                    		<select name="actor" id="" class="form-control">
+									{% for cast in casts %}
+									<option value="{{cast}}" class="option">{{cast}}</option>
+									{% endfor %}
+								</select>
+								<i class="zmdi zmdi-caret-down"></i>
+	                    	</div>
+	                    </div>
+						<div class="form-row">
+	                    	<label for="">
+	                    		Directors
+	                    	</label>
+	                    	<div class="form-holder">
+	                    		<select name="director" id="" class="form-control">
+									{% for director in directors %}
+									<option value="{{director}}" class="option">{{director}}</option>
+									{% endfor %}
+								</select>
+								<i class="zmdi zmdi-caret-down"></i>
+	                    	</div>
+	                    </div>
+						<div class="form-row">
+	                    	<label for="">
+	                    		Choreographers
+	                    	</label>
+	                    	<div class="form-holder">
+	                    		<select name="choreographer" id="" class="form-control">
+									{% for choreographer in choreographers %}
+									<option value="{{choreographer}}" class="option">{{choreographer}}</option>
+									{% endfor %}
+								</select>
+								<i class="zmdi zmdi-caret-down"></i>
+	                    	</div>
+	                    </div>	
+	                    
+	                    
+	                    
+	                </section>
+
+	                <!-- SECTION 3 -->
+	                <h4></h4>
+	                <section>
+	                    <div class="form-row">
+	                    	<h3 style="color: yellow;">
+								Thanks for providing with the information, click on the submit button to proceed!!
+							</h3>
+	                    	
+	                    </div>	
+	                    
+	                    
+	                    
+	                </section>
+            	</div>
+            </form>
+		</div>
+
+		<script src="static/assets1/js/jquery-3.3.1.min.js"></script>
+		
+		<!-- JQUERY STEP -->
+		<script src="static/assets1/js/jquery.steps.js"></script>
+
+		<!-- DATE-PICKER -->
+		<script src="static/assets1/vendor/date-picker/static/assets1/js/datepicker.js"></script>
+		<script src="static/assets1/vendor/date-picker/static/assets1/js/datepicker.en.js"></script>
+
+		<script src="static/assets1/js/main.js"></script>
+		
+		
+<!-- Template created and distributed by Colorlib -->
+</body>
+</html>
